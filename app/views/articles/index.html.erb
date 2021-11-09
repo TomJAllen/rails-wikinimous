@@ -6,9 +6,5 @@
   <% @articles.each do |article| %>
     <li><%= link_to article.title, article_path(article)%>
       <p><%= article.content %></p>
-      <p><%= link_to "Delete Article",
-            article_path(article),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %></p>
   <% end %>
 </ul>

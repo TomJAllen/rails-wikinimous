@@ -17,21 +17,21 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  # def edit
-  #   @task = Task.find(params[:id])
-  # end
+  def edit
+    @article = Article.find(params[:id])
+  end
 
-  # def update
-  #   @task = Task.find(params[:id])
-  #   @task.update(task_params)
-  #   redirect_to task_path(@task)
-  # end
+  def update
+    @article = Article.find(params[:id])
+    @article.update(article_params)
+    redirect_to article_path(@article)
+  end
 
-  #  def destroy
-  #    @task = Task.find(params[:id])
-  #    @task.destroy
-  #    redirect_to tasks_path
-  # end
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path
+  end
 
   private
 
